@@ -4,6 +4,8 @@ import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
+import ResetPassword from "./containers/ResetPassword";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 export default function Routes() {
   return (
     <Switch>
@@ -20,6 +22,9 @@ export default function Routes() {
       <Route>
         <NotFound />
       </Route>
+      <UnauthenticatedRoute exact path="/login/reset">
+        <ResetPassword />
+      </UnauthenticatedRoute>
     </Switch>
   );
 }

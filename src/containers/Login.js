@@ -34,7 +34,8 @@ export default function Login() {
       userHasAuthenticated(true);
       history.push("/");
     } catch (e) {
-      onError(e);
+      onError(e.message);
+      setIsLoading(false);
     }
   }
 
